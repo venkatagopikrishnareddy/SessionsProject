@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>DJango-Cookies-App2</title>
+    </head>
+    <body>
+        <h1>Welcome to Django Cookies App2(Home-page)</h1>
+        <hr />
+        <form action="/second">
+            {{formobj.as_p}}
+            {%csrf_token%}
+            <input type="submit" name="" surname="" fathername="" mothername="" dateOfbirth="" value="Enter Your Details & Click">
+        </form>
+    </body>
+</html>

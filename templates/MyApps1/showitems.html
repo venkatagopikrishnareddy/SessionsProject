@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>DJango-Cookies App-4</title>
+    </head>
+    <body>
+        <h1>DJango-Cookies App-4(Show-All-Items in Cookie)</h1>
+        <hr />
+        {%if request.COOKIES %}
+            <table border=2 width="50%">
+                <thead>
+                    <th>Item-Name</th>
+                    <th>Quantity</th>
+                </thead>
+                <tbody>
+                    {% for key,value in request.COOKIES.items %}
+
+                        <tr>
+                            <td>{{key}}</td>
+                            <td>{{value}}</td>
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        {%else%}
+            <p>Shopping-Cart-Items(Cookie Info) not-available!!</p>
+            <a href="/additem/">ADD-ITEMS</a>
+        {%endif%}
+        <br /><br />
+        <a href="/additem/">ADD-MORE-ITEMS</a>
+    </body>
+</html>

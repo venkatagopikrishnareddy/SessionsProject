@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Django Cookies Result-page App2</title>
+    </head>
+    <body>
+        <h1>DJango Cookies Result-page App2</h1>
+        <hr />
+        <h2>Welcome : {{name}}</h2>
+        <h2>Your SurName::{{surname}}</h2>
+        <h2>Your FatherName::{{fathername}}</h2>
+        <h2>Your MotherName::{{mothername}}</h2>
+        <h2>Your Date-Of-Birth::{{dateofbirth}}</h2>
+        <hr/>
+        <h3>Server Current Date and Time : {{date_time}}</h3>
+		<h3>Server Current Date and Time : {{date_time | date:'Y-m-d, h::i::s A'}}</h3>
+        <hr />
+        <a href="/result">Again...Click Here to get Updated Date & Time!!</a>
+        <a href="/home_view/">Go-Back to main-page</a>
+    </body>
+</html>
